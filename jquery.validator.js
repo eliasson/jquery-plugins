@@ -1,4 +1,13 @@
 /*
+
+ jQuery validator - Simple form validation plugin.
+
+ Copyright (c) 2013 Markus Eliasson, https://github.com/eliasson/jquery-plugins/
+ 
+ Released under BSD License
+
+ ----
+
  Validates a form's input fields either at focus loss or at form submission (default).
 
  To mark a form for validation, add the attribute "data-validation"
@@ -42,7 +51,6 @@
         focus-loss                      At elements focus loss
     
     data-validator-mirror           Specifies the id of the mirroring field
-    
 */
 (function($) {
     "use strict";
@@ -56,7 +64,6 @@
     }
 
     Validator.prototype = {
-
         init : function() {
             var self = this;
             this.$elements = this.$form.find('input[data-validator]');
@@ -167,7 +174,7 @@
                 var type = $element.attr("type"),
                     valid = false;
                 if(type === "password") {
-                    /* one digit, one lowercase, one upper case, and >6 in length */
+                    /* one digit, one lowercase, one upper case, and >5 in length */
                     var text = $element.val();
 
                     valid = text.length > 5;
@@ -208,7 +215,7 @@
 
     $.fn.validator.Constructor = Validator;
 
-    /** Automatically wire the validator plugin for all forms marked for validation */
+    /* Automatically wire the validator plugin for all forms marked for validation */
     $(function() {
         $("form[data-validation]").validator();
     });
