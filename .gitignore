@@ -6,3 +6,8 @@ Desktop.ini
 
 # Mac crap
 .DS_Store
+
+# Sublime editor
+*.sublime-project
+*.sublime-workspace
+

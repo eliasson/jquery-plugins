@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jquery plugins demo</title>
+        <meta name="description" content="Demonstrate the jQuery plugins." />
+        <meta name="author" content="markus.eliasson@gmail.com" />
+        <link rel="stylesheet" media="all" href="jquery.palette.css" />
+    </head>
+    <body>
+        <h1>jquery plugins</h1>
+        <p>Here are some various jQuery scripts made in other projects, but generic enough to be used elsewehere. Released under the BSD-license.</p>
+
+        <section>
+            <h2>jquery.validator</h2>
+            <p>Look at the this documents source code to see the attributes used, or read script's documentation in the source file.</p>
+            <form action="create-user" method="POST" data-validation>
+                <fieldset>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" 
+                        data-validator="required email"
+                        data-validator-on="focus-loss" />
+                </fieldset>
+                <fieldset>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password"
+                        data-validator="required password"
+                        data-validator-on="focus-loss" />
+                </fieldset>
+                <fieldset>
+                    <label for="verify-password">Verify password</label>
+                    <input type="password" name="verify-password" id="verify-password"
+                        data-validator="required password mirror"
+                        data-validator-on="focus-loss"
+                        data-validator-mirror="password" />
+                </fieldset>
+                <fieldset>
+                    <button type="submit">Create</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>jquery.palette</h2>
+            <p>Click the input field to see the palette, the color value will be written as RGB to the elements attribute <code>data-colorpicker-value</code>. And the elements background color will be set to the same color.</p>
+            <input type="text" class="palette" />
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="jquery.validator.js"></script>
+        <script src="jquery.palette.js"></script>
+    </body>
+</html>
