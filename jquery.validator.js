@@ -178,21 +178,24 @@
                     var text = $element.val();
 
                     valid = text.length > 5;
-                    if(!valid)
-                        return "Password needs to be more than 6 characters"
+                    if(!valid) {
+                        return "Password needs to be more than 5 characters";
+                    }
                     
                     valid =    /(?=.*\d)/.test(text);
-                    if(!valid)
-                        return "Password needs to contain at least one digit"
+                    if(!valid) {
+                        return "Password needs to contain at least one digit";
+                    }
 
                     valid = /(?=.*[a-z])/.test(text);
-                    if(!valid)
-                        return "Password needs to contain at least one lower case character"
+                    if(!valid) {
+                        return "Password needs to contain at least one lower case character";
+                    }
 
                     valid = /(?=.*[A-Z])/.test(text);
-                    if(!valid)
-                        return "Password needs to contain at least one upper case character"
-                    
+                    if(!valid) {
+                        return "Password needs to contain at least one upper case character";
+                    }                    
                 }
                 return undefined; // Should really be an error
             }
@@ -205,7 +208,7 @@
                 if(mirror !== undefined) {
                     var $mirror = self.$form.find("#" + mirror); 
                     if($element.val() !== $mirror.val()) {
-                        return "Not matching"
+                        return "Not matching";
                     }
                 }
                 return undefined; // Should really be an error
