@@ -35,6 +35,12 @@
                         data-validator-mirror="password" />
                 </fieldset>
                 <fieldset>
+                    <label for="color">Color (hex):</label>
+                    <input type="text" name="color" id="color"
+                        data-validator="required color-hex"
+                        data-validator-on="focus-loss" />
+                </fieldset>
+                <fieldset>
                     <button type="submit">Create</button>
                 </fieldset>
             </form>
