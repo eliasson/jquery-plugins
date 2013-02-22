@@ -39,6 +39,10 @@
             var self = this;
             event.stopPropagation();
 
+            if(this.$element.data("disabled") == true) {
+                return;
+            }
+
             if(this.visible) {
                 return;
             }
@@ -110,8 +114,4 @@
             'ef2929', 'cc0000', 'a40000',
             '888a85', '555753', '2e3436']
     };
-
-    $(document).ready(function() {
-        $("input.palette").palette();;
-    });
 })(jQuery);
