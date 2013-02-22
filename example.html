@@ -50,10 +50,17 @@
             <h2>jquery.palette</h2>
             <p>Click the input field to see the palette, the color value will be written as RGB to the elements attribute <code>data-colorpicker-value</code>. And the elements background color will be set to the same color.</p>
             <input type="text" class="palette" />
+            <p>You could also bind it to other elements, like an label:</p>
+            <label class="palette" >Clicky label</label>
+
+            <h3>Disable palette</h3>
+            <p>If you for some reason want to disable the color palette, just set the attribute data-disabled to true. To try this, click on the button and see what happens if you try click either on the label or the input field.</p>
+            <input type="button" value="Disable" class="disablePalette">
         </section>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="jquery.validator.js"></script>
         <script src="jquery.palette.js"></script>
+        <script src="example.js"></script>
     </body>
 </html>

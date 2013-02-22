@@ -37,6 +37,11 @@
 
         show : function(event) {
             var self = this;
+
+            if(this.$element.data("disabled") == true) {
+                return;
+            }
+
             event.stopPropagation();
 
             if(this.visible) {
@@ -110,8 +115,4 @@
             'ef2929', 'cc0000', 'a40000',
             '888a85', '555753', '2e3436']
     };
-
-    $(document).ready(function() {
-        $("input.palette").palette();;
-    });
 })(jQuery);
