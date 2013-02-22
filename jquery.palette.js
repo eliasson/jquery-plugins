@@ -37,11 +37,12 @@
 
         show : function(event) {
             var self = this;
-            event.stopPropagation();
 
             if(this.$element.data("disabled") == true) {
                 return;
             }
+
+            event.stopPropagation();
 
             if(this.visible) {
                 return;
