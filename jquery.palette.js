@@ -81,7 +81,6 @@
                 var color = $(this).css('background-color');
                 self.$element.css('color', color);
                 self.$element.css('background-color', color);
-                self.$element.css('border-color', color);
                 self.$element.attr('data-colorpicker-value', color);
                 self.$element.val(color);
                 $(palette).fadeOut('fast', function() {
